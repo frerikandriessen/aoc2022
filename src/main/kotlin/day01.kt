@@ -7,15 +7,14 @@ fun day01() {
 
 
 fun parseElvesFromInput(): List<Int> {
-    val newLine = System.lineSeparator()
     val inputFile = getInputFile("01")
 
     return inputFile
         .readText()
         .trim()
-        .split("$newLine$newLine")
+        .split("\n\n")
         .map { it -> it
-            .split("$newLine")
+            .split("\n")
             .map { it.toInt()}
             .sum() }
         .toList()

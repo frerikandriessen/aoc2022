@@ -37,13 +37,12 @@ fun day03() {
 
 
 fun parseRucksacksFromInput(): List<String> {
-    val newLine = System.lineSeparator()
     val inputFile = getInputFile("03")
 
     return inputFile
         .readText()
         .trim()
-        .split("$newLine")
+        .split("\n")
         .toList()
 }
 

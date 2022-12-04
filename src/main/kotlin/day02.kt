@@ -7,13 +7,12 @@ fun day02() {
 
 
 fun parseRoundsFromInput(): List<List<String>> {
-    val newLine = System.lineSeparator()
     val inputFile = getInputFile("02")
 
     return inputFile
         .readText()
         .trim()
-        .split("$newLine")
+        .split("\n")
         .map { it -> it.split(" ")}
         .toList()
 }
