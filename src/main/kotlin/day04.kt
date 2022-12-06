@@ -1,4 +1,12 @@
 fun day04() {
+    val day = "04"
+
+    fun parseAssignmentsFromInput() =
+        getInputFile(day)
+            .readText()
+            .trim()
+            .lines()
+
     fun rangeToSet(range: String): Set<Int> {
         val start = range.split("-")[0].toInt()
         val end = range.split("-")[1].toInt()
@@ -23,17 +31,3 @@ fun day04() {
     val resultB = b(parseAssignmentsFromInput())
     println("Result for b: $resultB")
 }
-
-
-fun parseAssignmentsFromInput(): List<String> {
-    val inputFile = getInputFile("04")
-
-    return inputFile
-        .readText()
-        .trim()
-        .split("\n")
-        .toList()
-}
-
-
-

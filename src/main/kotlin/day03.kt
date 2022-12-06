@@ -1,4 +1,12 @@
 fun day03() {
+    val day = "03"
+
+    fun parseRucksacksFromInput() =
+        getInputFile(day)
+            .readText()
+            .trim()
+            .lines()
+
     val alphabetSet = CharRange('A', 'z').toSet()
     val charMap = mutableMapOf<Char, Int>()
     var charValue = 1
@@ -34,17 +42,3 @@ fun day03() {
     val resultB = b(parseRucksacksFromInput())
     println("Result for b: $resultB")
 }
-
-
-fun parseRucksacksFromInput(): List<String> {
-    val inputFile = getInputFile("03")
-
-    return inputFile
-        .readText()
-        .trim()
-        .split("\n")
-        .toList()
-}
-
-
-
